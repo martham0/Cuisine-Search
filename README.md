@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+## Resources
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+How to connect to Yelp API using axios:
+https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5
+
+CSS guide:
+https://tachyons.io/
 
 ## Available Scripts
 

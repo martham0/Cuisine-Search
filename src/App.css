@@ -10,3 +10,11 @@
   display: flex;
   align-items: baseline;
 }
+
+@font-face {
+  font-family: 'webFont';
+  src: local('webFont'), url(./webFont.ttf) format('truetype');
+}
+h1 {
+  font-family: webFont;
+}
