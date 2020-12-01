@@ -16,6 +16,7 @@ class App extends Component {
 
       cuisine: '',
       status: true,
+      loading: false,
       rest: [],
       cards: 1,
     };
@@ -70,7 +71,6 @@ class App extends Component {
           input={this.onInput}
           val={this.state.cards}
         />
-
         <div
           style={{ display: 'flex', justifyContent: 'space-around' }}
           className="pa3 ma2  db"
