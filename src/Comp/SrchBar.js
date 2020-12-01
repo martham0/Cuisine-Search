@@ -2,8 +2,8 @@ import './SrchBar.css';
 function SrchBar({ cuisine, location, input, select, val }) {
   return (
     <div className="center ba br-pill pa3 ma3 shadow-5 srch">
-      <label className="db fw6 lh-copy f4" htmlFor="cuisine">
-        Type of cuisine
+      <label className="db fw8 lh-copy f4 " htmlFor="cuisine">
+        Cuisine
       </label>
       <input
         className="input-reset"
@@ -13,7 +13,7 @@ function SrchBar({ cuisine, location, input, select, val }) {
         onChange={cuisine}
       />
       <div>
-        <label className="db fw6 lh-copy f4" htmlFor="location">
+        <label className="db  fw8 lh-copy f4" htmlFor="location">
           Location
         </label>
         <input
@@ -25,7 +25,7 @@ function SrchBar({ cuisine, location, input, select, val }) {
         />
       </div>
       <div>
-        <label className="db fw6 lh-copy f4" htmlFor="number">
+        <label className="db fw8 lh-copy f4" htmlFor="number">
           Num. of restaurants{' '}
         </label>
         <select
