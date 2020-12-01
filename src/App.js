@@ -60,22 +60,25 @@ class App extends Component {
         <div>
           <Logo />
         </div>
-        <h1> Yelp</h1>
+        <h1 className="f-subheadline ma0"> Yelp</h1>
 
         <SrchBar
+          className="pt0"
           select={this.onSelect}
           cuisine={this.cusChange}
           location={this.locChange}
           input={this.onInput}
           val={this.state.cards}
         />
+
         <div
           style={{ display: 'flex', justifyContent: 'space-around' }}
-          className="pa3 ma2"
+          className="pa3 ma2  db"
         >
           {this.state.rest.map((rst) => {
             return (
               <Card
+                className="mh2"
                 name={rst.name}
                 img={rst.image_url}
                 rating={rst.rating}
