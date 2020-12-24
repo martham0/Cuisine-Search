@@ -16,7 +16,6 @@ class App extends Component {
 
       cuisine: '',
       status: true,
-      loading: false,
       rest: [],
       cards: 1,
     };
@@ -61,7 +60,7 @@ class App extends Component {
         <div>
           <Logo />
         </div>
-        <h1 className="f-subheadline ma0"> Yelp</h1>
+        <h1 className="f-subheadline ma0"> Cuisine Search</h1>
 
         <SrchBar
           className="pt0"
@@ -71,6 +70,7 @@ class App extends Component {
           input={this.onInput}
           val={this.state.cards}
         />
+
         <div
           style={{ display: 'flex', justifyContent: 'space-around' }}
           className="pa3 ma2  db"
