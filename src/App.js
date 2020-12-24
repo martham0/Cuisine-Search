@@ -42,12 +42,11 @@ class App extends Component {
           },
           params: {
             categories: this.state.cuisine,
-            limit: this.state.cards
           },
         }
       )
       .then((res) => {
-        this.setState({ rest: res.data.businesses});
+        this.setState({ rest: res.data.businesses.slice(0, this.state.cards) });
       })
       .catch((err) => {
         this.setState({ status: false });
