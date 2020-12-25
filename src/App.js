@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       location: '',
-
+      loading: false,
       cuisine: '',
       status: true,
       rest: [],
@@ -31,6 +31,7 @@ class App extends Component {
     this.setState({ cards: event.target.value });
   };
   onInput = () => {
+    this.setState({ loading: true });
     axios
       .get(
         `${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${
@@ -42,11 +43,13 @@ class App extends Component {
           },
           params: {
             categories: this.state.cuisine,
+            limit: this.state.cards,
           },
         }
       )
       .then((res) => {
-        this.setState({ rest: res.data.businesses.slice(0, this.state.cards) });
+        this.setState({ rest: res.data.businesses });
+        this.setState({ loading: false });
       })
       .catch((err) => {
         this.setState({ status: false });
@@ -61,7 +64,6 @@ class App extends Component {
           <Logo />
         </div>
         <h1 className="f-subheadline ma0"> Cuisine Search</h1>
-
         <SrchBar
           className="pt0"
           select={this.onSelect}
@@ -70,7 +72,7 @@ class App extends Component {
           input={this.onInput}
           val={this.state.cards}
         />
-
+        {this.state.loading && <h1>Loading...</h1>}
         <div
           style={{ display: 'flex', justifyContent: 'space-around' }}
           className="pa3 ma2  db"
