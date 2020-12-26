@@ -6,3 +6,4 @@ node_modules
 
 #ignore extensions
 .eslintcache
+.DS_Store
