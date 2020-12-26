@@ -1,12 +1,11 @@
 import { Component } from 'react';
 import './App.css';
-import Logo from './Comp/Logo';
-import SrchBar from './Comp/SrchBar';
-import Card from './Comp/Card';
+import Logo from './Components/Logo';
+import SrchBar from './Components/SrchBar';
+import Card from './Components/Card';
 import axios from 'axios';
 
-let apikey =
-  'KLG6QQkitXNamc3kjNBlFWyTF0GKg-RojWfJyRYyqrRf_Uddar5TGZLbXlvqEc7YsWu7yGgYwN5_W4KUT0lNbqmg-zoN_9eRKtm4EgVNS6HJF866VH7A_U-vB9G2X3Yx';
+const API_KEY = process.env.REACT_APP_YELP_API_KEY;
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +38,7 @@ class App extends Component {
         }`,
         {
           headers: {
-            Authorization: `Bearer ${apikey}`,
+            Authorization: `Bearer ${API_KEY}`,
           },
           params: {
             categories: this.state.cuisine,
@@ -72,6 +71,8 @@ class App extends Component {
           input={this.onInput}
           val={this.state.cards}
         />
+
+        {/* Loading */}
         {this.state.loading && <h1>Loading...</h1>}
         <div
           style={{ display: 'flex', justifyContent: 'space-around' }}

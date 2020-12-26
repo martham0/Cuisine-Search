@@ -1,4 +1,4 @@
-import Yelp from './yelp.png';
+import res from '../Img/food-store.png';
 import './Logo.css';
 import Tilt from 'react-tilt';
 
@@ -10,7 +10,7 @@ function Logo({}) {
         options={{ max: 25 }}
         style={{ height: 90, width: 90 }}
       >
-        <img src={Yelp} />
+        <img src={res} />
       </Tilt>
     </div>
   );

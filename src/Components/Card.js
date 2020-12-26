@@ -1,5 +1,3 @@
-import rest from './food-store.png';
-import sun from './sun.png';
 import './Card.css';
 
 function Card({ name, img, rating, loc }) {
